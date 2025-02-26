@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="map.js" type="module"></script>
     <title>Cycle Cycle</title>
 </head>
 <body>
     <h1>🚴🏼‍♀️ Cycle Cycle</h1>
+    
+    <header>
+        <h1>
+            <label>Filter by time: <input type=range id="time-slider" min=-1 max=1440 value="-1">
+            <em id="any-time">(any time)</em>
+            <time id="selected-time"></time>
+            </label>
+        </h1>
+    </header>
     <p>Interactive map visualization of bike traffic in the Boston area, depicting traffic at different times of the day.</p>
+    <div id="map">
+        <svg></svg>
+    </div>
+
+    <div class="legend">
+        <div style="--departure-ratio: 1">More departures</div>
+        <div style="--departure-ratio: 0.5">Balanced</div>
+        <div style="--departure-ratio: 0">More arrivals</div>
+    </div>
 </body>
-</html>
+</html.0>
